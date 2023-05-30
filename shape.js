@@ -1,6 +1,6 @@
 class Shape {
-  constructor() {
-    this.colour = "";
+  constructor(colour) {
+    this.colour = colour;
   }
   setColour(shapeColour) {
     this.colour = shapeColour;

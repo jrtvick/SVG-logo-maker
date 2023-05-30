@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const SVG = require("./svg");
 const { Circle, Square, Triangle } = require("./shape");
+const { writeFile } = require("fs/promises");
 
 class CLI {
   init() {
@@ -32,21 +33,26 @@ class CLI {
         let shape;
         switch (data.logoShape) {
           case "circle":
-            shape = new Circle();
+            shape = new Circle(data.shapeColour);
             break;
           case "square":
-            shape = new Square();
+            shape = new Square(data.shapeColour);
             break;
           case "triangle":
-            shape = new Triangle();
+            shape = new Triangle(data.shapeColour);
             break;
         }
-        shape.setColour(data.shapeColour);
         const svg = new SVG();
         svg.setText(data.text, data.textColour);
         svg.setShape(shape);
-        console.log(svg.render());
-      });
+        return writeFile("generated-logo.svg", svg.render());
+      })
+      .then(() => {
+        console.log("success!")
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 }
 
