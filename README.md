@@ -17,11 +17,11 @@ https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs
 
 ## Usage
 
-![Tyler Vick's SVG Logo Maker demonstration video](./assets/videos/SVG-logo-maker-demo.webm)
+![Tyler Vick's SVG Logo Maker demonstration video](./assets/videos/SVG-logo-maker-jrtvick.webm)
 
 Sorry the video doesn't seem to be inserting properly into the readme, please view it at the following link:
 
-https://drive.google.com/file/d/1eiL92UWsoFkeyKRaja31tCsE7XBq3NNK/view
+https://drive.google.com/file/d/1QBhp3rTqbFjRJZPdb9Vf5cOWP3CH1tKD/view
 
 
 The URL of the GitHub repository: https://github.com/jrtvick/svg-logo-maker.git
