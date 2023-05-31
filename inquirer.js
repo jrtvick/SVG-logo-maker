@@ -11,6 +11,11 @@ class CLI {
           type: "input",
           name: "text",
           message: "Input a 1-3 character title for your logo",
+          validate: (text) => {
+            if (text.length <= 3) {
+              return true;
+            } else return "The title must be 3 characters or less";
+          }
         },
         {
           type: "input",

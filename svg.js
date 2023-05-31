@@ -4,6 +4,9 @@ class SVG {
     this.shape = "";
   }
   setText(text, textColour) {
+    if (text.length > 3) {
+      throw new Error('The title must be 3 characters or less');
+    }
     this.text = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text>`;
   }
   setShape(logoShape) {
